@@ -69,6 +69,9 @@
 		case MachOHeader::CpuTypeX8664:
 			label = NSLocalizedString(@"CPU_TYPE_X8664", nil);
 			break;
+		case MachOHeader::CpuTypeArm64:
+			label = NSLocalizedString(@"CPU_TYPE_ARM64", nil);
+			break;
 		default:
 			label = NSLocalizedString(@"UNDEFINED", nil);
 			break;

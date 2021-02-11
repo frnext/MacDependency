@@ -64,6 +64,9 @@ MachOHeader::CpuType MachOHeader::getCpuType(unsigned int cpu) {
         case CPU_TYPE_X86_64:
             cpuType = MachOHeader::CpuTypeX8664;
             break;
+        case CPU_TYPE_ARM64:
+            cpuType = MachOHeader::CpuTypeArm64;
+            break;
         default:
             cpuType = MachOHeader::CpuTypeOther;
     }
