@@ -1,9 +1,9 @@
 #ifndef MACHOHEADER_H
 #define MACHOHEADER_H
 
-#include "MachO_global.h"
+#include "macho_global.h"
 #include "machofile.h"
-#include "/usr/include/mach-o/loader.h"
+#include "mach-o/loader.h"
 
 class EXPORT MachOHeader
 {

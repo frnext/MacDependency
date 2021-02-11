@@ -33,7 +33,7 @@ private:
             void addPath(const string& path);
             bool replaceHomeDirectory(string& path);
             StringList paths;
-            static const char* PATHS_SEPARATOR;
+            static const char  PATHS_SEPARATOR;
             static const char* HOME_PATH;
     };
 

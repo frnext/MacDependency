@@ -85,7 +85,7 @@
 	// TODO: detect changes on document file (FSEvents) or alternatively make reload possible
 	
 	// load file
-	NSString* file = [super fileName];
+	NSString* file = [[super fileURL] path];
 	
 	// convert to std:string
 	std::string fileString = [file stdString];

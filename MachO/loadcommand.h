@@ -1,7 +1,7 @@
 #ifndef LOADCOMMAND_H
 #define LOADCOMMAND_H
 #include "macho_global.h"
-#include "/usr/include/mach-o/loader.h"
+#include "mach-o/loader.h"
 
 class MachOHeader;
 class MachOFile;

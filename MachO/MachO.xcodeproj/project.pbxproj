@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -48,16 +48,23 @@
 		8E212E93101237A50078924A /* machodemangleexception.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E212E91101237A50078924A /* machodemangleexception.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8E212E94101237A50078924A /* machodemangleexception.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8E212E92101237A50078924A /* machodemangleexception.cpp */; };
 		8E49393F100AA468004B7E53 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E49393E100AA468004B7E53 /* CoreFoundation.framework */; };
-		8E8C73E1106AA95D0037CF19 /* libboost_filesystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E8C73DF106AA95D0037CF19 /* libboost_filesystem.a */; };
-		8E8C73E2106AA95D0037CF19 /* libboost_system.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E8C73E0106AA95D0037CF19 /* libboost_system.a */; };
 		8ED32FDE100B99EC00EBF623 /* machocache.h in Headers */ = {isa = PBXBuildFile; fileRef = 8ED32FDC100B99EC00EBF623 /* machocache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8ED32FDF100B99EC00EBF623 /* machocache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8ED32FDD100B99EC00EBF623 /* machocache.cpp */; };
+		B7583EEA171C588B00D5A7C1 /* libboost_filesystem-mt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7583EE9171C588B00D5A7C1 /* libboost_filesystem-mt.a */; };
+		B7583EEC171C589300D5A7C1 /* libboost_system-mt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7583EEB171C589300D5A7C1 /* libboost_system-mt.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F3A45F5420CBF72C00325C26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3A45F4F20CBF71F00325C26 /* boost.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F368D69420CBF26E00AAEC1B;
+			remoteInfo = "boost libraries";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
-		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		32DBCF5E0370ADEE00C91783 /* MachO_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MachO_Prefix.pch; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* MachO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MachO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E131512100F7C6B00367510 /* demangler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = demangler.cpp; sourceTree = "<group>"; };
@@ -101,11 +108,12 @@
 		8E212E91101237A50078924A /* machodemangleexception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = machodemangleexception.h; sourceTree = "<group>"; };
 		8E212E92101237A50078924A /* machodemangleexception.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = machodemangleexception.cpp; sourceTree = "<group>"; };
 		8E49393E100AA468004B7E53 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
-		8E8C73DF106AA95D0037CF19 /* libboost_filesystem.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_filesystem.a; path = /usr/local/lib/static/libboost_filesystem.a; sourceTree = "<absolute>"; };
-		8E8C73E0106AA95D0037CF19 /* libboost_system.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_system.a; path = /usr/local/lib/static/libboost_system.a; sourceTree = "<absolute>"; };
 		8ED32FDC100B99EC00EBF623 /* machocache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = machocache.h; sourceTree = "<group>"; };
 		8ED32FDD100B99EC00EBF623 /* machocache.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = machocache.cpp; sourceTree = "<group>"; };
-		D2F7E79907B2D74100F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		B7583EE9171C588B00D5A7C1 /* libboost_filesystem-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libboost_filesystem-mt.a"; path = "../boost/lib/libboost_filesystem-mt.a"; sourceTree = "<group>"; };
+		B7583EEB171C589300D5A7C1 /* libboost_system-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libboost_system-mt.a"; path = "../boost/lib/libboost_system-mt.a"; sourceTree = "<group>"; };
+		F31D0F6F25D473180078324B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F3A45F4F20CBF71F00325C26 /* boost.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = boost.xcodeproj; path = ../boost_1_36_0/boost.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,8 +122,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E49393F100AA468004B7E53 /* CoreFoundation.framework in Frameworks */,
-				8E8C73E1106AA95D0037CF19 /* libboost_filesystem.a in Frameworks */,
-				8E8C73E2106AA95D0037CF19 /* libboost_system.a in Frameworks */,
+				B7583EEA171C588B00D5A7C1 /* libboost_filesystem-mt.a in Frameworks */,
+				B7583EEC171C589300D5A7C1 /* libboost_system-mt.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +141,7 @@
 		0867D691FE84028FC02AAC07 /* MachO */ = {
 			isa = PBXGroup;
 			children = (
+				F3A45F4F20CBF71F00325C26 /* boost.xcodeproj */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				089C1665FE841158C02AAC07 /* Resources */,
@@ -146,7 +155,6 @@
 			isa = PBXGroup;
 			children = (
 				1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */,
-				1058C7B2FEA5585E11CA2CBB /* Other Frameworks */,
 			);
 			name = "External Frameworks and Libraries";
 			sourceTree = "<group>";
@@ -211,21 +219,11 @@
 		1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8E8C73DF106AA95D0037CF19 /* libboost_filesystem.a */,
-				8E8C73E0106AA95D0037CF19 /* libboost_system.a */,
+				B7583EE9171C588B00D5A7C1 /* libboost_filesystem-mt.a */,
+				B7583EEB171C589300D5A7C1 /* libboost_system-mt.a */,
 				8E49393E100AA468004B7E53 /* CoreFoundation.framework */,
 			);
 			name = "Linked Frameworks";
-			sourceTree = "<group>";
-		};
-		1058C7B2FEA5585E11CA2CBB /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				0867D6A5FE840307C02AAC07 /* AppKit.framework */,
-				D2F7E79907B2D74100F64583 /* CoreData.framework */,
-				0867D69BFE84028FC02AAC07 /* Foundation.framework */,
-			);
-			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
 		32C88DFF0371C24200C91783 /* Other Sources */ = {
@@ -234,6 +232,13 @@
 				32DBCF5E0370ADEE00C91783 /* MachO_Prefix.pch */,
 			);
 			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		F3A45F5020CBF71F00325C26 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +279,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "MachO" */;
 			buildPhases = (
+				F3F8652E20CBDF6C008CF3FA /* ShellScript */,
 				8DC2EF500486A6940098B216 /* Headers */,
 				8DC2EF520486A6940098B216 /* Resources */,
 				8DC2EF540486A6940098B216 /* Sources */,
@@ -282,6 +288,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				F3A45F5520CBF72C00325C26 /* PBXTargetDependency */,
 			);
 			name = MachO;
 			productInstallPath = "$(HOME)/Library/Frameworks";
@@ -294,12 +301,27 @@
 /* Begin PBXProject section */
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1210;
+				ORGANIZATIONNAME = "Konrad Windszus";
+			};
 			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "MachO" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+				Base,
+			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* MachO */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F3A45F5020CBF71F00325C26 /* Products */;
+					ProjectRef = F3A45F4F20CBF71F00325C26 /* boost.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8DC2EF4F0486A6940098B216 /* MachO */,
@@ -317,6 +339,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F3F8652E20CBDF6C008CF3FA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# link boost_process library as \"process\" folder, since the MachO project file expects it there as header search path\nrm -f $SRCROOT/../process && ln -s $SRCROOT/../../boost_process $SRCROOT/../process";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8DC2EF540486A6940098B216 /* Sources */ = {
@@ -348,11 +386,19 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		F3A45F5520CBF72C00325C26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "boost libraries";
+			targetProxy = F3A45F5420CBF72C00325C26 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		089C1666FE841158C02AAC07 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				089C1667FE841158C02AAC07 /* English */,
+				F31D0F6F25D473180078324B /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -364,28 +410,35 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1.0.2;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = MachO_Prefix.pch;
+				GCC_VERSION = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
 				GCC_WARN_EFFECTIVE_CPLUSPLUS_VIOLATIONS = YES;
 				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
 				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
 				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
-				HEADER_SEARCH_PATHS = /usr/local/include;
+				HEADER_SEARCH_PATHS = (
+					$SRCROOT/../boost_1_36_0,
+					$SRCROOT/../process,
+				);
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@executable_path/../Frameworks";
-				LIBRARY_SEARCH_PATHS = /usr/local/lib/static;
+				LIBRARY_SEARCH_PATHS = $SRCROOT/../boost/lib;
+				MACOSX_DEPLOYMENT_TARGET = "";
 				OTHER_LDFLAGS = "-Wl,-search_paths_first";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.googlecode.${PRODUCT_NAME:identifier}";
 				PRODUCT_NAME = MachO;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -394,20 +447,27 @@
 		1DEB91AF08733DA50010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0.2;
 				DEAD_CODE_STRIPPING = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = MachO_Prefix.pch;
-				HEADER_SEARCH_PATHS = /usr/local/include;
+				GCC_VERSION = "";
+				HEADER_SEARCH_PATHS = (
+					$SRCROOT/../boost_1_36_0,
+					$SRCROOT/../process,
+				);
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@executable_path/../Frameworks";
-				LIBRARY_SEARCH_PATHS = /usr/local/lib/static;
+				LIBRARY_SEARCH_PATHS = $SRCROOT/../boost/lib;
+				MACOSX_DEPLOYMENT_TARGET = "";
 				OTHER_LDFLAGS = "-Wl,-search_paths_first";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.googlecode.${PRODUCT_NAME:identifier}";
 				PRODUCT_NAME = MachO;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -416,28 +476,31 @@
 		1DEB91B208733DA50010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEPLOYMENT_LOCATION = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = "";
 				ONLY_ACTIVE_ARCH = YES;
-				PREBINDING = NO;
-				SDKROOT = macosx10.5;
+				SDKROOT = macosx;
+				USE_HEADERMAP = NO;
 			};
 			name = Debug;
 		};
 		1DEB91B308733DA50010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				PREBINDING = NO;
-				SDKROOT = macosx10.5;
+				MACOSX_DEPLOYMENT_TARGET = "";
+				SDKROOT = macosx;
+				USE_HEADERMAP = NO;
 			};
 			name = Release;
 		};

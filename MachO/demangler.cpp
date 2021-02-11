@@ -1,50 +1,46 @@
 #include "demangler.h"
 #include "machodemangleexception.h"
+#include <cxxabi.h>
+#include <dlfcn.h>
 
-using namespace boost::process;
 /**
- class for using c++flt to demangle names. Uses Boost.Process from http://www.highscore.de/cpp/process/index.html
+ class to demangle names.
  */
-Demangler::Demangler() : child(NULL), isRunning(false)
+Demangler::Demangler()
 {
-	init();
+	void *swiftRuntimeDSOHandle = dlopen("/usr/lib/swift/libswiftCore.dylib", RTLD_LOCAL | RTLD_LAZY);
+	if (!swiftRuntimeDSOHandle) {
+		swift_demangle = NULL;
+		throw MachODemangleException(string("Unable to load library: ") + dlerror());
+	}
+	swift_demangle = (char *(*)(const char *, size_t, char *, size_t, uint32_t))dlsym(swiftRuntimeDSOHandle, "swift_demangle");
+	if (!swift_demangle) {
+		dlclose(swiftRuntimeDSOHandle);
+		swiftRuntimeDSOHandle = NULL;
+		throw MachODemangleException(string("Unable to get symbol: ") + dlerror());
+	}
 }
 
 Demangler::~Demangler()
 {
-	if (child)
-		child->terminate();
-	delete child;
+	if (swiftRuntimeDSOHandle != NULL)
+		dlclose(swiftRuntimeDSOHandle);
 }
 
 string Demangler::demangleName(const string& name) {
-	if (isRunning){
-		(*stdin) << name << endl;
-		string line;
-		getline(*stdout, line);
-		return line;
-	} else {
-		throw MachODemangleException("Could not find/start process c++flt.");
+	std::string result = name;
+	int status = 0;
+	// +1 to skip the leading underscore
+	char *realName = abi::__cxa_demangle(name.c_str() + 1, NULL, NULL, &status);
+	if (realName != NULL)
+		result = realName;
+	free(realName);
+	// name is not a valid name under the C++ ABI mangling rules
+	if (status == -2 && swift_demangle != NULL) {
+		char *realName = swift_demangle(name.c_str(), name.length(), NULL, NULL, 0);
+		if (realName != NULL)
+			result = realName;
+		free(realName);
 	}
-}
-
-void Demangler::init() {
-	try {
-	std::string exec = find_executable_in_path("c++filt"); 
-	std::vector<std::string> args;
-	args.push_back("--strip-underscore"); 
-	context ctx; 
-	ctx.environment = self::get_environment(); 
-	ctx.stdout_behavior = capture_stream(); 
-	ctx.stdin_behavior = capture_stream(); 
-	child = new boost::process::child(launch(exec, args, ctx)); 
-	stdout = &child->get_stdout(); 
-	stdin = &child->get_stdin();
-	isRunning = true;
-	// TODO: check exceptions
-	} catch (boost::filesystem::filesystem_error& e) {
-		// errors during finding executable
-	} catch (boost::system::system_error& e2) {
-		// errors during starting of process
-	}
+	return result;
 }

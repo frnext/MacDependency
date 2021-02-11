@@ -2,7 +2,6 @@
 #define DEMANGLER_H
 
 #include "macho_global.h"
-#include <boost/process.hpp>
 
 class Demangler
 {
@@ -11,14 +10,10 @@ public:
     virtual ~Demangler();
 
     string demangleName(const string& name);
+
 private:
-	boost::process::child* child;
-	boost::process::pistream* stdout; 
-	boost::process::postream* stdin;
-	bool isRunning;
-	
-	void init();
-private:
+    char *(*swift_demangle)(const char *, size_t, char *, size_t, uint32_t);
+    void *swiftRuntimeDSOHandle;
 };
 
 #endif // DEMANGLER_H

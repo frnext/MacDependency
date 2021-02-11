@@ -3,11 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
 		8E1314FA100F7BFC00367510 /* MyDocument.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8E1314F9100F7BFC00367510 /* MyDocument.mm */; };
 		8E1314FC100F7C0C00367510 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1314FB100F7C0C00367510 /* main.m */; };
 		8E131507100F7C3C00367510 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8E1314FF100F7C3C00367510 /* Credits.rtf */; };
@@ -16,8 +15,6 @@
 		8E13150A100F7C3C00367510 /* MyDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E131505100F7C3C00367510 /* MyDocument.xib */; };
 		8E1315C5100F8F1400367510 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8E1315C3100F8F1400367510 /* Localizable.strings */; };
 		8E212D84101212FF0078924A /* SymbolTableEntryTypeFormatter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8E212D83101212FF0078924A /* SymbolTableEntryTypeFormatter.mm */; };
-		8E49358B100A5714004B7E53 /* MachO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E493565100A53DA004B7E53 /* MachO.framework */; };
-		8E493597100A5871004B7E53 /* MachO.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 8E493565100A53DA004B7E53 /* MachO.framework */; };
 		8EAEBA2310126AB100E1D5D2 /* SymbolTableController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8EAEBA2210126AB100E1D5D2 /* SymbolTableController.mm */; };
 		8EB56272104EA241006A44CD /* TreeControllerExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB56271104EA241006A44CD /* TreeControllerExtension.m */; };
 		8EB5640E104FE62F006A44CD /* AutoExpandOutlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB5640D104FE62F006A44CD /* AutoExpandOutlineView.m */; };
@@ -29,19 +26,23 @@
 		8ED4567B10516D6200FAC99F /* MyDocumentWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED4567A10516D6200FAC99F /* MyDocumentWindow.m */; };
 		8EFDEF7A101007B300E4D54D /* ConversionStdString.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8EFDEF79101007B300E4D54D /* ConversionStdString.mm */; };
 		8EFDEF9310100F1700E4D54D /* VersionFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFDEF9210100F1700E4D54D /* VersionFormatter.m */; };
+		B7761E1E1B7E31E900A316F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7761E1D1B7E31E900A316F8 /* Assets.xcassets */; };
+		F37635C420CBE9A1004700FF /* MachO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F8652820CBDF13008CF3FA /* MachO.framework */; };
+		F37635C520CBE9A1004700FF /* MachO.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3F8652820CBDF13008CF3FA /* MachO.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F3F8655B20CBE646008CF3FA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F8655A20CBE646008CF3FA /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8E493564100A53DA004B7E53 /* PBXContainerItemProxy */ = {
+		F3F8652720CBDF13008CF3FA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8E493560100A53DA004B7E53 /* MachO.xcodeproj */;
+			containerPortal = F3F8652220CBDF13008CF3FA /* MachO.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
 			remoteInfo = MachO;
 		};
-		8ED32F30100B5EFA00EBF623 /* PBXContainerItemProxy */ = {
+		F3F8655220CBE56F008CF3FA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8E493560100A53DA004B7E53 /* MachO.xcodeproj */;
+			containerPortal = F3F8652220CBDF13008CF3FA /* MachO.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = MachO;
@@ -49,38 +50,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		8E493598100A588F004B7E53 /* Copy Frameworks */ = {
+		F37635C820CBE9A1004700FF /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8E493597100A5871004B7E53 /* MachO.framework in Copy Frameworks */,
+				F37635C520CBE9A1004700FF /* MachO.framework in Embed Frameworks */,
 			);
-			name = "Copy Frameworks";
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		13E42FBA07B3F13500E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
-		2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
-		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32DBCF750370BD2300C91783 /* MacDependency_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacDependency_Prefix.pch; sourceTree = "<group>"; };
 		8D15AC370486D014006FF6A4 /* MacDependency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacDependency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E1314F8100F7BFC00367510 /* MyDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDocument.h; sourceTree = "<group>"; };
 		8E1314F9100F7BFC00367510 /* MyDocument.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyDocument.mm; sourceTree = "<group>"; };
 		8E1314FB100F7C0C00367510 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8E1314FD100F7C1D00367510 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8E131500100F7C3C00367510 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
-		8E131502100F7C3C00367510 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		8E131504100F7C3C00367510 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		8E131506100F7C3C00367510 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MyDocument.xib; sourceTree = "<group>"; };
-		8E1315C4100F8F1400367510 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8E212D82101212FF0078924A /* SymbolTableEntryTypeFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SymbolTableEntryTypeFormatter.h; sourceTree = "<group>"; };
 		8E212D83101212FF0078924A /* SymbolTableEntryTypeFormatter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SymbolTableEntryTypeFormatter.mm; sourceTree = "<group>"; };
-		8E493560100A53DA004B7E53 /* MachO.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MachO.xcodeproj; path = ../MachO/MachO.xcodeproj; sourceTree = SOURCE_ROOT; };
 		8EAEBA2110126AB100E1D5D2 /* SymbolTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SymbolTableController.h; sourceTree = "<group>"; };
 		8EAEBA2210126AB100E1D5D2 /* SymbolTableController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SymbolTableController.mm; sourceTree = "<group>"; };
 		8EB56270104EA241006A44CD /* TreeControllerExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeControllerExtension.h; sourceTree = "<group>"; };
@@ -104,6 +95,14 @@
 		8EFDEF79101007B300E4D54D /* ConversionStdString.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ConversionStdString.mm; sourceTree = "<group>"; };
 		8EFDEF9110100F1700E4D54D /* VersionFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VersionFormatter.h; sourceTree = "<group>"; };
 		8EFDEF9210100F1700E4D54D /* VersionFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VersionFormatter.m; sourceTree = "<group>"; };
+		B7761E1D1B7E31E900A316F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F31D0F6D25D4730C0078324B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		F31D0F6E25D4730E0078324B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MyDocument.xib; sourceTree = "<group>"; };
+		F31D0F7125D4731A0078324B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		F31D0F7225D4731D0078324B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F31D0F7325D4731F0078324B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F3F8652220CBDF13008CF3FA /* MachO.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MachO.xcodeproj; path = ../MachO/MachO.xcodeproj; sourceTree = "<group>"; };
+		F3F8655A20CBE646008CF3FA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,33 +110,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E49358B100A5714004B7E53 /* MachO.framework in Frameworks */,
-				8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */,
+				F3F8655B20CBE646008CF3FA /* Cocoa.framework in Frameworks */,
+				F37635C420CBE9A1004700FF /* MachO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				8E493560100A53DA004B7E53 /* MachO.xcodeproj */,
-				1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */,
-			);
-			name = "Linked Frameworks";
-			sourceTree = "<group>";
-		};
-		1058C7A8FEA54F5311CA2CBB /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */,
-				13E42FBA07B3F13500E4EEF1 /* CoreData.framework */,
-				2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */,
-			);
-			name = "Other Frameworks";
-			sourceTree = "<group>";
-		};
 		19C28FB0FE9D524F11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,10 +129,11 @@
 		2A37F4AAFDCFA73011CA2CEA /* MacDependency */ = {
 			isa = PBXGroup;
 			children = (
+				F3F8652220CBDF13008CF3FA /* MachO.xcodeproj */,
 				2A37F4ABFDCFA73011CA2CEA /* Classes */,
 				2A37F4AFFDCFA73011CA2CEA /* Other Sources */,
 				2A37F4B8FDCFA73011CA2CEA /* Resources */,
-				2A37F4C3FDCFA73011CA2CEA /* Frameworks */,
+				F3F8655920CBE646008CF3FA /* Frameworks */,
 				19C28FB0FE9D524F11CA2CBB /* Products */,
 			);
 			name = MacDependency;
@@ -204,6 +185,7 @@
 		2A37F4B8FDCFA73011CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B7761E1D1B7E31E900A316F8 /* Assets.xcassets */,
 				8E1314FF100F7C3C00367510 /* Credits.rtf */,
 				8E131501100F7C3C00367510 /* InfoPlist.strings */,
 				8E131503100F7C3C00367510 /* MainMenu.xib */,
@@ -214,21 +196,20 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		2A37F4C3FDCFA73011CA2CEA /* Frameworks */ = {
+		F3F8652320CBDF13008CF3FA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */,
-				1058C7A8FEA54F5311CA2CBB /* Other Frameworks */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		8E493561100A53DA004B7E53 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8E493565100A53DA004B7E53 /* MachO.framework */,
+				F3F8652820CBDF13008CF3FA /* MachO.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		F3F8655920CBE646008CF3FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3F8655A20CBE646008CF3FA /* Cocoa.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,12 +222,13 @@
 				8D15AC2B0486D014006FF6A4 /* Resources */,
 				8D15AC300486D014006FF6A4 /* Sources */,
 				8D15AC330486D014006FF6A4 /* Frameworks */,
-				8E493598100A588F004B7E53 /* Copy Frameworks */,
+				F37635C820CBE9A1004700FF /* Embed Frameworks */,
+				F340342520D3942500E5264E /* Copy App */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8ED32F31100B5EFA00EBF623 /* PBXTargetDependency */,
+				F3F8655320CBE56F008CF3FA /* PBXTargetDependency */,
 			);
 			name = MacDependency;
 			productInstallPath = "$(HOME)/Applications";
@@ -260,17 +242,23 @@
 		2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 1210;
 				ORGANIZATIONNAME = "Konrad Windszus";
 			};
 			buildConfigurationList = C05733CB08A9546B00998B17 /* Build configuration list for PBXProject "MacDependency" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+				Base,
+			);
 			mainGroup = 2A37F4AAFDCFA73011CA2CEA /* MacDependency */;
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 8E493561100A53DA004B7E53 /* Products */;
-					ProjectRef = 8E493560100A53DA004B7E53 /* MachO.xcodeproj */;
+					ProductGroup = F3F8652320CBDF13008CF3FA /* Products */;
+					ProjectRef = F3F8652220CBDF13008CF3FA /* MachO.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -281,11 +269,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		8E493565100A53DA004B7E53 /* MachO.framework */ = {
+		F3F8652820CBDF13008CF3FA /* MachO.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = MachO.framework;
-			remoteRef = 8E493564100A53DA004B7E53 /* PBXContainerItemProxy */;
+			remoteRef = F3F8652720CBDF13008CF3FA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -299,11 +287,31 @@
 				8E131508100F7C3C00367510 /* InfoPlist.strings in Resources */,
 				8E131509100F7C3C00367510 /* MainMenu.xib in Resources */,
 				8E13150A100F7C3C00367510 /* MyDocument.xib in Resources */,
+				B7761E1E1B7E31E900A316F8 /* Assets.xcassets in Resources */,
 				8E1315C5100F8F1400367510 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F340342520D3942500E5264E /* Copy App */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FULL_PRODUCT_NAME)",
+			);
+			name = "Copy App";
+			outputPaths = (
+				"$(PROJECT_DIR)/../$(FULL_PRODUCT_NAME)",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/bin/echo \"Copying $BUILT_PRODUCTS_DIR/$FULL_PRODUCT_NAME to $PROJECT_DIR/../$FULL_PRODUCT_NAME\"\n/usr/bin/ditto \"$BUILT_PRODUCTS_DIR/$FULL_PRODUCT_NAME\" \"$PROJECT_DIR/../$FULL_PRODUCT_NAME\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D15AC300486D014006FF6A4 /* Sources */ = {
@@ -330,10 +338,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8ED32F31100B5EFA00EBF623 /* PBXTargetDependency */ = {
+		F3F8655320CBE56F008CF3FA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MachO;
-			targetProxy = 8ED32F30100B5EFA00EBF623 /* PBXContainerItemProxy */;
+			targetProxy = F3F8655220CBE56F008CF3FA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -341,7 +349,7 @@
 		8E1314FF100F7C3C00367510 /* Credits.rtf */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8E131500100F7C3C00367510 /* English */,
+				F31D0F7125D4731A0078324B /* en */,
 			);
 			name = Credits.rtf;
 			sourceTree = "<group>";
@@ -349,7 +357,7 @@
 		8E131501100F7C3C00367510 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8E131502100F7C3C00367510 /* English */,
+				F31D0F7225D4731D0078324B /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -357,7 +365,7 @@
 		8E131503100F7C3C00367510 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8E131504100F7C3C00367510 /* English */,
+				F31D0F6D25D4730C0078324B /* Base */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -365,7 +373,7 @@
 		8E131505100F7C3C00367510 /* MyDocument.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8E131506100F7C3C00367510 /* English */,
+				F31D0F6E25D4730E0078324B /* Base */,
 			);
 			name = MyDocument.xib;
 			sourceTree = "<group>";
@@ -373,7 +381,7 @@
 		8E1315C3100F8F1400367510 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8E1315C4100F8F1400367510 /* English */,
+				F31D0F7325D4731F0078324B /* en */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -385,20 +393,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../MachO/build/Debug\"",
-				);
+				CURRENT_PROJECT_VERSION = 1.0.2;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = MacDependency_Prefix.pch;
+				GCC_VERSION = "";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.googlecode.${PRODUCT_NAME:identifier}";
 				PRODUCT_NAME = MacDependency;
 			};
 			name = Debug;
@@ -407,26 +418,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../MachO/build/Release\"",
-				);
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0.2;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = MacDependency_Prefix.pch;
+				GCC_VERSION = "";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.googlecode.${PRODUCT_NAME:identifier}";
 				PRODUCT_NAME = MacDependency;
-				SDKROOT = macosx10.5;
 			};
 			name = Release;
 		};
 		C05733CC08A9546B00998B17 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
@@ -446,20 +459,19 @@
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PREBINDING = NO;
-				SDKROOT = macosx10.5;
+				SDKROOT = macosx;
+				USE_HEADERMAP = NO;
 			};
 			name = Debug;
 		};
 		C05733CD08A9546B00998B17 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				PREBINDING = NO;
-				SDKROOT = macosx10.5;
+				SDKROOT = macosx;
+				USE_HEADERMAP = NO;
 			};
 			name = Release;
 		};
