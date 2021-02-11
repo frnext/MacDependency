@@ -136,8 +136,11 @@
 				F3F8655920CBE646008CF3FA /* Frameworks */,
 				19C28FB0FE9D524F11CA2CBB /* Products */,
 			);
+			indentWidth = 4;
 			name = MacDependency;
 			sourceTree = "<group>";
+			tabWidth = 4;
+			usesTabs = 1;
 		};
 		2A37F4ABFDCFA73011CA2CEA /* Classes */ = {
 			isa = PBXGroup;
