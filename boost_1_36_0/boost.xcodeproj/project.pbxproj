@@ -100,7 +100,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./tools/jam/src/bin.macosxx86_64/bjam variant=release link=static threading=multi --layout=tagged --toolset=darwin --with-filesystem --stagedir=\"$SRCROOT/../boost\" stage\n";
+			shellScript = "if [ -f ./tools/jam/src/bin.macosx/bjam ]; then\nBJAM=./tools/jam/src/bin.macosx/bjam\nelse\nBJAM=./tools/jam/src/bin.macosxx86_64/bjam\nfi\n$BJAM variant=release link=static threading=multi --layout=tagged --toolset=darwin --with-filesystem --stagedir=\"$SRCROOT/../boost\" cxxflags=\"-arch x86_64 -arch arm64\" stage\n";
 		};
 		F3A45F4C20CBF68400325C26 /* Build boost jam */ = {
 			isa = PBXShellScriptBuildPhase;

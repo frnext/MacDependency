@@ -28,7 +28,7 @@
 		8EFDEF9310100F1700E4D54D /* VersionFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFDEF9210100F1700E4D54D /* VersionFormatter.m */; };
 		B7761E1E1B7E31E900A316F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7761E1D1B7E31E900A316F8 /* Assets.xcassets */; };
 		F37635C420CBE9A1004700FF /* MachO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F8652820CBDF13008CF3FA /* MachO.framework */; };
-		F37635C520CBE9A1004700FF /* MachO.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3F8652820CBDF13008CF3FA /* MachO.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F37635C520CBE9A1004700FF /* MachO.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3F8652820CBDF13008CF3FA /* MachO.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F3F8655B20CBE646008CF3FA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F8655A20CBE646008CF3FA /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
@@ -226,7 +226,6 @@
 				8D15AC300486D014006FF6A4 /* Sources */,
 				8D15AC330486D014006FF6A4 /* Frameworks */,
 				F37635C820CBE9A1004700FF /* Embed Frameworks */,
-				F340342520D3942500E5264E /* Copy App */,
 			);
 			buildRules = (
 			);
@@ -296,25 +295,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		F340342520D3942500E5264E /* Copy App */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FULL_PRODUCT_NAME)",
-			);
-			name = "Copy App";
-			outputPaths = (
-				"$(PROJECT_DIR)/../$(FULL_PRODUCT_NAME)",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/bin/echo \"Copying $BUILT_PRODUCTS_DIR/$FULL_PRODUCT_NAME to $PROJECT_DIR/../$FULL_PRODUCT_NAME\"\n/usr/bin/ditto \"$BUILT_PRODUCTS_DIR/$FULL_PRODUCT_NAME\" \"$PROJECT_DIR/../$FULL_PRODUCT_NAME\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D15AC300486D014006FF6A4 /* Sources */ = {
